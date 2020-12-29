@@ -18,12 +18,12 @@ Inspired by my work as an Assistant Coach where I noticed most players overestim
 
 
 #### Hadas added
-![](Images/Hadas.png)
+![](Images/HadasAdded.png)
 
 
-#### Second Run
-![](Images/SecondRun.png)
+#### Second Run - Emily Added
+![](Images/EmilyAdded.png)
 
 
-#### Emily added
-![](Images/Emily.png)
+#### Hadas sheet deleted
+![](Images/HadasDeleted.png)
