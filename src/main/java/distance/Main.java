@@ -11,7 +11,12 @@ public class Main {
 	public static void main(String[] args) throws IOException {
 
 		// create the excel file "PlayerData" on desktop
-		File fileName = new File("/Users/hadaslibman/Desktop/PlayerData.xls");
+		if(args.length < 1) {
+			System.out.println("Missing XLS file path");
+			return;
+		}
+		File fileName = new File(args[0]);
+		
 
 		// check if file exists already. If not, create the file
 		if (!fileName.exists()) {
