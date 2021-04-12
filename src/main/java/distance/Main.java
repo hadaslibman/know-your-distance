@@ -58,7 +58,7 @@ public class Main {
 			} else {
 				System.out.println("Invalid input, please try again");
 				checkInput = false;
-			} 
+			}
 		}
 	}
 }

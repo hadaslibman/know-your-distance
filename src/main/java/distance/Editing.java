@@ -45,7 +45,8 @@ public class Editing {
 		while (currentRow.getRowNum() > 0) {
 			if (currentRow.getCell(column) != null) {
 				div++;
-				total += Double.parseDouble(avgSheet.getRow(currentRow.getRowNum()).getCell(column).getStringCellValue());
+				total += Double
+						.parseDouble(avgSheet.getRow(currentRow.getRowNum()).getCell(column).getStringCellValue());
 				average = total / div;
 			} else {
 				average = 0;
@@ -88,7 +89,7 @@ public class Editing {
 		}
 		System.out.println("Which player would you like to delete? ");
 		Scanner input = new Scanner(System.in);
-		String delete = input.nextLine();
+		String delete = input.nextLine().trim();
 		Sheet playerSheet = workbook.getSheet(delete);
 		while (playerSheet == null) {
 			System.out.println("player name is invalid, please input valid player name");
@@ -118,7 +119,7 @@ public class Editing {
 
 		System.out.println("Which player would you like to edit? ");
 		Scanner input = new Scanner(System.in);
-		String decision = input.nextLine();
+		String decision = input.nextLine().trim();
 		Sheet playerSheet = workbook.getSheet(decision);
 		while (playerSheet == null) {
 			System.out.println("player name is invalid, please input valid player name");
@@ -131,7 +132,6 @@ public class Editing {
 		System.out.println("If done entering distnces for the specified iron, or would like to skip, hit enter \n ");
 		HSSFSheet currentSheet = workbook.getSheet(decision);
 
-		// HSSFSheet currentSheet = playerList();
 		/////////////////////////////////////////// print 4 iron
 		System.out.println(currentSheet.getRow(0).getCell(0));
 
@@ -160,7 +160,6 @@ public class Editing {
 			System.out.println("The average is " + average);
 		}
 
-		// System.out.println("The average is " +returnAverage(currentSheet,0));
 		System.out.println("********************************");
 
 		/////////////////////////////////////////// print 5 iron
@@ -191,7 +190,6 @@ public class Editing {
 			System.out.println("The average is " + average);
 		}
 
-		// System.out.println("The average is " +returnAverage(currentSheet,1));
 		System.out.println("********************************");
 
 		/////////////////////////////////////////// print 6 iron
@@ -222,7 +220,6 @@ public class Editing {
 			System.out.println("The average is " + average);
 		}
 
-		// System.out.println("The average is " +returnAverage(currentSheet,2));
 		System.out.println("********************************");
 
 		/////////////////////////////////////////// print 7 iron
@@ -253,7 +250,6 @@ public class Editing {
 			System.out.println("The average is " + average);
 		}
 
-		// System.out.println("The average is " +returnAverage(currentSheet,3));
 		System.out.println("********************************");
 
 		/////////////////////////////////////////// print 8 iron
@@ -283,7 +279,6 @@ public class Editing {
 			System.out.println("The average is " + average);
 		}
 
-		// System.out.println("The average is " +returnAverage(currentSheet,4));
 		System.out.println("********************************");
 
 		/////////////////////////////////////////// print 9 iron
@@ -314,7 +309,6 @@ public class Editing {
 			System.out.println("The average is " + average);
 		}
 
-		// System.out.println("The average is " +returnAverage(currentSheet,5));
 		System.out.println("********************************");
 
 		/////////////////////////////////////////// print p iron
@@ -345,7 +339,6 @@ public class Editing {
 			System.out.println("The average is " + average);
 		}
 
-		// System.out.println("The average is " +returnAverage(currentSheet,6));
 		System.out.println("********************************");
 
 		FileOutputStream editWrite = new FileOutputStream(inputFile);

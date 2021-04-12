@@ -18,27 +18,29 @@ public class Player {
 
 	// method to check if player sheet already exists
 	public static String playerExist(HSSFWorkbook book, Scanner input) {
-		System.out.println("Enter player's name: ");
-		String playerName = input.nextLine();
 
-		if (book.getNumberOfSheets() == 0) {
-			return playerName;
-		} else {
-			boolean checkExist = false;
-			while (checkExist == false) {
-				for (int i = 0; i < book.getNumberOfSheets(); i++) {
-					for (Sheet individualSheet : book) {
-						String sheet = individualSheet.getSheetName();
-						if (sheet.compareTo(playerName) == 0) {
-							System.out.println("Player's name already exist. Try again");
-							playerName = input.nextLine();
-						} else {
-							checkExist = true;
-						}
-					}
+		String playerName = null;
+
+		boolean done = false;
+		while (done == false) {
+
+			do {
+				System.out.println("Enter player's name: ");
+				playerName = input.nextLine().trim();
+			} while (playerName.isBlank());
+
+			boolean exists = false;
+			for (Sheet individualSheet : book) {
+				String sheet = individualSheet.getSheetName();
+				if (sheet.compareToIgnoreCase(playerName) == 0) {
+					System.out.println("Player's name already exist. Try again");
+					exists = true;
+					break;
 				}
 			}
+			done = !exists;
 		}
+
 		return playerName;
 	}
 
