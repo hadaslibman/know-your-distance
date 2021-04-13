@@ -7,23 +7,3 @@ On initial use, the program creates an excel file that allows the user to create
 User can also add or delete player’s data at any time.
 
 Inspired by my work as an Assistant Coach where I noticed most players overestimate their distance capabilities. 
-
-### Usage:
-* In Main class line 10 - user to needs change destination path for the excel file and can also change file name
-
-## Example
-
-#### Initial Run
-![](Images/InitialRun.png)
-
-
-#### Hadas added
-![](Images/HadasAdded.png)
-
-
-#### Second Run - Emily Added
-![](Images/EmilyAdded.png)
-
-
-#### Hadas sheet deleted
-![](Images/HadasDeleted.png)
