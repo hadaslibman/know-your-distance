@@ -6,4 +6,4 @@ echo =============================================
 echo =============================================
 echo =============================================
 echo =============================================
-java -jar target/Distance-0.0.1-SNAPSHOT-jar-with-dependencies.jar /tmp/file.xls
+java -jar target/Distance-0.0.1-SNAPSHOT-jar-with-dependencies.jar "$1"
